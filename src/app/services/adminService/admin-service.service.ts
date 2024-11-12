@@ -211,6 +211,10 @@ export class AdminServiceService {
     return this.http.get<ApiResponse>(`${apiUrls.adminApi}deleteFaq/${faqId}`,{withCredentials:true});
   }
 
+  getBarGraphData(){
+    return this.http.get<ApiResponse>(`${apiUrls.adminApi}getBarGraphData`,{withCredentials:true});
+  }
+
   
 }
 

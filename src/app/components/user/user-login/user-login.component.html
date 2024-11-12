@@ -6,6 +6,7 @@
             <img src="../../../assets/images/login.jpeg" alt="E-Learning" class="login-image">
         </div>
         <div class="col-lg-6 login-right">
+            <app-test-credentials-popup *ngIf="showPopup" (closePopup)="handlePopupClose()"></app-test-credentials-popup>
             <div class="login-form">
                 <div class="container-fluid">
                     <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
