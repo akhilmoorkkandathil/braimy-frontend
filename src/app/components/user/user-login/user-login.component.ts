@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { UserLoginService } from '../../../services/userLogin/user-login.service';
-import { FacebookLoginProvider, SocialUser } from 'angularx-social-login';
+import { SocialUser } from '@abacritt/angularx-social-login';
 import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { ToastService } from '../../../services/toastService/toast.service';
 import { UserSignupService } from '../../../services/userSignup/user-signup.service';
@@ -60,9 +60,9 @@ export class UserLoginComponent implements OnInit{
     //this.checkLoginStatus();
     this.setupGoogleAuthListener();
   }
-  signInWithFB(): void {
-    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
-  }
+  // signInWithFB(): void {
+  //   this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
+  // }
 
   setupGoogleAuthListener() {
     this.socialAuthService.authState.subscribe((user) => {
