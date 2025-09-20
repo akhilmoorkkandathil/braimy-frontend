@@ -6,6 +6,7 @@
             <img src="../../../assets/images/login.jpeg" alt="E-Learning" class="login-image">
         </div>
         <div class="col-lg-6 login-right">
+            <app-test-credentials-popup *ngIf="showPopup" (closePopup)="handlePopupClose()"></app-test-credentials-popup>
             <div class="login-form">
                 <div class="container-fluid">
                     <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
@@ -60,10 +61,6 @@
                             <div class="text-center my-3">Or</div>
                             <div class="social-login-buttons d-flex justify-center">
                                 <asl-google-signin-button type="standard" size="medium"></asl-google-signin-button>
-                                <button class="btn facebook-btn d-flex align-items-center justify-content-center" (click)="signInWithFB()">
-                                  <img class="facebook-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtfbcYeYgf0wQJ-LSPm3CPbyB7T1p0f5bnaA&s" alt="Facebook"> 
-                                  <span>Sign in with Facebook</span>
-                                </button>
                               </div>
                               
                     <p class="text-center mt-3">You don't have an account? <a [routerLink]="['/register']" routerLinkActive="router-link-active" ><span class="signup">Sign up</span></a></p>

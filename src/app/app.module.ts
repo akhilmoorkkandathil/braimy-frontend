@@ -44,7 +44,6 @@ import {MatSelectModule} from '@angular/material/select';
 
 import {  SocialAuthServiceConfig, GoogleSigninButtonModule } from '@abacritt/angularx-social-login';
 import { GoogleLoginProvider,SocialLoginModule } from '@abacritt/angularx-social-login';
-import { FacebookLoginProvider } from 'angularx-social-login';
 import { SidebarComponent } from './components/admin/sidebar/sidebar.component';
 import { AdminHeaderComponent } from './components/admin/admin-header/admin-header.component';
 import { TutorLayoutComponent } from './layouts/tutor-layout/tutor-layout.component';
@@ -87,6 +86,7 @@ import { environment } from '../environments/environment';
 import { TutorClassHistoryComponent } from './components/tutor/tutor-class-history/tutor-class-history.component';
 import { UserPaymentHistoryComponent } from './components/user/user-payment/user-payment-history/user-payment-history.component';
 import { StudentVideoCallComponent } from './components/user/video-call/video-call.component';
+import { TestCredentialsPopupComponent } from './components/user/user-login/test-credentials-popup/test-credentials-popup.component';
 
 const config: SocketIoConfig = { url: environment.SOCKET_IO_URL , options: {} };
 
@@ -144,6 +144,7 @@ const config: SocketIoConfig = { url: environment.SOCKET_IO_URL , options: {} };
     ConfirmDialogueComponent,
     TutorClassHistoryComponent,
     UserPaymentHistoryComponent,
+    TestCredentialsPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -202,10 +203,6 @@ const config: SocketIoConfig = { url: environment.SOCKET_IO_URL , options: {} };
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider('413388112525-kcbrhvaqns1usl5j546tgl26mtliq9rf.apps.googleusercontent.com')
-          },
-          {
-            id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('975750380968165')
           }
         ],
         onError: (err) => {

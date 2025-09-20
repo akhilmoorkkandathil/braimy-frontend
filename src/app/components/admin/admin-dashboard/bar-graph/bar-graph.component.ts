@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
  
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { AdminServiceService } from '../../../../services/adminService/admin-service.service';
+import { DataPoint } from '../../../../interfaces/dataPoint';
 
 @Component({
   selector: 'app-bar-graph',
@@ -11,11 +13,36 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
   templateUrl: './bar-graph.component.html',
   styleUrl: './bar-graph.component.css'
 })
-export class BarGraphComponent {
-  title = 'angular17ssrapp';
-	chartOptions = {
+export class BarGraphComponent implements OnInit, AfterViewInit {
+
+	dataPoint:DataPoint;
+	chartOption:any;
+
+
+	constructor(private adminService:AdminServiceService){}
+
+	ngOnInit(): void {
+		this.fetchData()
+	}
+
+	fetchData(){
+		this.adminService.getBarGraphData().subscribe({
+		  next: (response) => {
+			console.log("Bardata",response.data);
+			this.dataPoint = response.data
+			this.chartOption = this.getChartOptions()
+			
+		  },
+		  error: (error) => {
+			console.error('Error fetching dashboard data:', error);
+		  }
+		});
+	  }
+
+ngAfterViewInit(): void {
+	this.chartOption={
 		title: {
-			text: "Angular Column Chart with Index Labels"
+			text: "Completed classes in last 10 days"
 		},
 		animationEnabled: true,
 		axisY: {
@@ -25,14 +52,33 @@ export class BarGraphComponent {
 			type: "column", //change type to bar, line, area, pie, etc
 			//indexLabel: "{y}", //Shows y value on all Data Points
 			indexLabelFontColor: "#5A5757",
-			dataPoints: [
-				{ x: 50, y: 71 },
-				{ x: 60, y: 92, indexLabel: "Highest\u2191" },
-				{ x: 70, y: 68 },
-				{ x: 80, y: 38, indexLabel: "Lowest\u2193"  },
-				{ x: 90, y: 54 },
-				{ x: 100, y: 60 }
-			]
+			dataPoints: []
 		}]
-	}
+   }
 }
+
+getChartOptions() {
+	return {
+		title: {
+			text: "Completed classes in last 10 days"
+		},
+		animationEnabled: true,
+		axisY: {
+			includeZero: true
+		},
+		data: [{
+			type: "column", //change type to bar, line, area, pie, etc
+			//indexLabel: "{y}", //Shows y value on all Data Points
+			indexLabelFontColor: "#5A5757",
+			dataPoints: this.dataPoint
+		}]
+	};
+  }
+
+   
+}
+
+
+
+	
+

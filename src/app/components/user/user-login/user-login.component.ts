@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { UserLoginService } from '../../../services/userLogin/user-login.service';
-import { FacebookLoginProvider, SocialUser } from 'angularx-social-login';
+import { SocialUser } from '@abacritt/angularx-social-login';
 import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { ToastService } from '../../../services/toastService/toast.service';
 import { UserSignupService } from '../../../services/userSignup/user-signup.service';
@@ -36,6 +36,8 @@ export class UserLoginComponent implements OnInit{
   loggedIn: boolean = false;
   readonly VAPID_PUBLIC_KEY = 'BD_qZ0tyVaPC6DVg2kKmWTqw9C4NOMyHiZYyLJIwDmoKvhdF0ieqIw9vaffOnfJCoI2fWAyBk1Pib8KWsp5Lsd8';
   private subscriptions: Subscription[] = [];
+  showPopup: boolean = false;
+
 
   constructor(
     private loginService: UserLoginService,
@@ -46,6 +48,11 @@ export class UserLoginComponent implements OnInit{
   ){}
 
   ngOnInit(): void {
+    if(sessionStorage.getItem('STUDENT') || sessionStorage.getItem('TUTOR') || sessionStorage.getItem('ADMIN') ||sessionStorage.getItem('COORDINATOR')){
+      this.showPopup = false; 
+    }else{
+      this.showPopup = true; 
+    }
     this.validateStudentForm();
     this.validateTutorForm();
     this.validateCoordinatorForm();
@@ -53,9 +60,9 @@ export class UserLoginComponent implements OnInit{
     //this.checkLoginStatus();
     this.setupGoogleAuthListener();
   }
-  signInWithFB(): void {
-    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
-  }
+  // signInWithFB(): void {
+  //   this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID);
+  // }
 
   setupGoogleAuthListener() {
     this.socialAuthService.authState.subscribe((user) => {
@@ -209,7 +216,9 @@ export class UserLoginComponent implements OnInit{
       .subscribe({
         next: (res) => {
           //console.log(res.token); tutorId
+          localStorage.setItem("tutorId", res.data.tutorId);
           sessionStorage.setItem('TUTOR', "tutor");
+          localStorage.setItem('user_type', "tutor");
           localStorage.setItem('tutor_auth_token', res.token);
           this.toast.showSuccess(res.message, 'Success');
             this.router.navigate(['/tutor/dashboard']);
@@ -233,6 +242,7 @@ export class UserLoginComponent implements OnInit{
           sessionStorage.setItem('COORDINATOR', "coordinator");
           this.toast.showSuccess(res.message, 'Success');
           localStorage.setItem('coordinator_auth_token', res.token);
+          localStorage.setItem('user_type', "coordinator");
             this.router.navigate(['/coordinator/dashboard']);
           
         },
@@ -271,6 +281,10 @@ export class UserLoginComponent implements OnInit{
   ngOnDestroy(): void {
     this.subscriptions.forEach(subscription => subscription.unsubscribe());
   } 
+
+  handlePopupClose() {
+    this.showPopup = false; // Hide popup when the close button is clicked
+  }
 }
 
 

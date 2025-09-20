@@ -93,7 +93,6 @@ export class UserRegisterComponent implements OnInit,OnDestroy {
       .subscribe({
         next: (res)=>{
           //console.log('User Created');
-          this.message = "User created Successfully.Please verify your Email";
           const userId= res.data.id;
           const userType = res.data.userType;
           this.router.navigate(['user/otpverify'],{ queryParams: { userId: `${userId}`, userType: `${userType}` } });
@@ -106,14 +105,11 @@ export class UserRegisterComponent implements OnInit,OnDestroy {
   }
 
   onTutorSubmit() {
-    //console.log("Signup button clicked");
-    //console.log(this.signupForm.value);
 
     this.tutorSignupSubscription = this.SignupService.tutorSignup(this.tutorSignupForm.value)
       .subscribe({
         next: (res)=>{
-          this.message = "Tutor created Successfully.";
-          this.toast.showSuccess('Login Successful', 'Success');
+          this.toast.showSuccess(res.message, 'Success');
           this.router.navigate(['login']);
           this.signupForm.reset();
         },

@@ -86,7 +86,8 @@ export class UserPaymentComponent {
                 if (userData) {
                   const updatedUserData: User = {
                     ...userData,
-                    rechargedHours: res.data.timeRecharged // Assuming res.timeRecharged is the recharged time from the response
+                    rechargedHours: res.data.rechargedHours,
+
                   };
                   this.userDataService.updateUserData(updatedUserData);
                 }
