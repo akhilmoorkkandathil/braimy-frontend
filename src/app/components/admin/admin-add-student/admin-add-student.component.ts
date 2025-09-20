@@ -9,9 +9,10 @@ import { Tutor } from '../../../interfaces/tutor';
 import { StudentData } from '../../../interfaces/studentFormData';
 
 @Component({
-  selector: 'app-admin-add-student',
-  templateUrl: './admin-add-student.component.html',
-  styleUrl: './admin-add-student.component.css'
+    selector: 'app-admin-add-student',
+    templateUrl: './admin-add-student.component.html',
+    styleUrl: './admin-add-student.component.css',
+    standalone: false
 })
 export class AdminAddStudentComponent {
   studentForm!: FormGroup;

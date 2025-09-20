@@ -5,9 +5,10 @@ import { MatSort } from '@angular/material/sort';
 import { Column } from '../../../interfaces/table/table'; // Adjust the path as per your project
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+    selector: 'app-table',
+    templateUrl: './table.component.html',
+    styleUrls: ['./table.component.css'],
+    standalone: false
 })
 export class TableComponent<T> implements OnInit, AfterViewInit, OnChanges {
   @Input() tableColumns: Array<Column> = [];

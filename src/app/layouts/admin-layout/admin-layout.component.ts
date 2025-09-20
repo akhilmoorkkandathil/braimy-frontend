@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 @Component({
-  selector: 'app-admin-layout',
-  templateUrl: './admin-layout.component.html',
-  styleUrl: './admin-layout.component.css'
+    selector: 'app-admin-layout',
+    templateUrl: './admin-layout.component.html',
+    styleUrl: './admin-layout.component.css',
+    standalone: false
 })
 export class AdminLayoutComponent {
 

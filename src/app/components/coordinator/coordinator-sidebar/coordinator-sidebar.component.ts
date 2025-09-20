@@ -6,9 +6,10 @@ import { Coordinator } from '../../../interfaces/coordinator';
 import { CoordinatorDataService } from '../../../services/coordinatorDataService/coordinator-data.service';
 
 @Component({
-  selector: 'app-coordinator-sidebar',
-  templateUrl: './coordinator-sidebar.component.html',
-  styleUrl: './coordinator-sidebar.component.css'
+    selector: 'app-coordinator-sidebar',
+    templateUrl: './coordinator-sidebar.component.html',
+    styleUrl: './coordinator-sidebar.component.css',
+    standalone: false
 })
 export class CoordinatorSidebarComponent implements OnInit {
   coordinatorData: Coordinator;

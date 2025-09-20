@@ -11,9 +11,10 @@ import { CompletedClass } from '../../../interfaces/completedCassResponse';
 import { courseBucket } from '../../../interfaces/courseBucket';
 
 @Component({
-  selector: 'app-coordinator-classes',
-  templateUrl: './coordinator-classes.component.html',
-  styleUrl: './coordinator-classes.component.css'
+    selector: 'app-coordinator-classes',
+    templateUrl: './coordinator-classes.component.html',
+    styleUrl: './coordinator-classes.component.css',
+    standalone: false
 })
 export class CoordinatorClassesComponent {
   tableColumns: Array<Column> = [

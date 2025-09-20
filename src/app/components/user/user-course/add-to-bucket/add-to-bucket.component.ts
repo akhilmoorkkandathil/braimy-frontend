@@ -13,11 +13,10 @@ import { UserDataService } from '../../../../services/userDataService/user-data.
 
 
 @Component({
-  selector: 'app-add-to-bucket',
-  standalone: true,
-  imports: [MatFormFieldModule, MatSelectModule, MatInputModule, FormsModule, ReactiveFormsModule,MatDialogActions,MatDialogContent,NgxMatTimepickerModule],
-  templateUrl: './add-to-bucket.component.html',
-  styleUrl: './add-to-bucket.component.css'
+    selector: 'app-add-to-bucket',
+    imports: [MatFormFieldModule, MatSelectModule, MatInputModule, FormsModule, ReactiveFormsModule, MatDialogActions, MatDialogContent, NgxMatTimepickerModule],
+    templateUrl: './add-to-bucket.component.html',
+    styleUrl: './add-to-bucket.component.css'
 })
 export class AddToBucketComponent implements OnInit {
   preferredDays: string = '';

@@ -14,11 +14,10 @@ import { Router } from '@angular/router';
 import { ToastService } from '../../../services/toastService/toast.service';
 
 @Component({
-  selector: 'app-user-courses',
-  standalone: true,
-  imports: [MatGridListModule,MatCardModule,CommonModule,IgxButtonModule,IgxIconModule,IgxCardModule,IgxRippleModule],
-  templateUrl: './user-courses.component.html',
-  styleUrl: './user-courses.component.css'
+    selector: 'app-user-courses',
+    imports: [MatGridListModule, MatCardModule, CommonModule, IgxButtonModule, IgxIconModule, IgxCardModule, IgxRippleModule],
+    templateUrl: './user-courses.component.html',
+    styleUrl: './user-courses.component.css'
 })
 export class UserCoursesComponent implements OnInit {
 

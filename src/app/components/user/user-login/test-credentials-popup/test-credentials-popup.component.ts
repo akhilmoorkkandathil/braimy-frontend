@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-test-credentials-popup',
-  templateUrl: './test-credentials-popup.component.html',
-  styleUrl: './test-credentials-popup.component.css'
+    selector: 'app-test-credentials-popup',
+    templateUrl: './test-credentials-popup.component.html',
+    styleUrl: './test-credentials-popup.component.css',
+    standalone: false
 })
 export class TestCredentialsPopupComponent {
   isVisible = true;

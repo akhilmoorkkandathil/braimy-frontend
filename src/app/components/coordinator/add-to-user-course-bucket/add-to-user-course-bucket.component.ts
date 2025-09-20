@@ -17,11 +17,11 @@ import { courseBucket } from '../../../interfaces/courseBucket';
 import { CourseBucketResponse } from '../../../interfaces/courseBucketForm';
 
 @Component({
-  selector: 'app-add-to-user-course-bucket',
-  standalone: true,
-  imports: [FormsModule,ReactiveFormsModule,MatFormField,MatFormFieldModule, MatSelectModule, MatInputModule, FormsModule, ReactiveFormsModule,MatDialogActions,MatDialogContent,NgxMatTimepickerModule,MatButtonModule],
-  templateUrl: './add-to-user-course-bucket.component.html',
-  styleUrl: './add-to-user-course-bucket.component.css'
+    selector: 'app-add-to-user-course-bucket',
+    imports: [FormsModule, ReactiveFormsModule, MatFormField, MatFormFieldModule, MatSelectModule, MatInputModule, FormsModule, ReactiveFormsModule, NgxMatTimepickerModule, MatButtonModule],
+    standalone:true,
+    templateUrl: './add-to-user-course-bucket.component.html',
+    styleUrl: './add-to-user-course-bucket.component.css'
 })
 export class AddToUserCourseBucketComponent {
   manageForm!: FormGroup;

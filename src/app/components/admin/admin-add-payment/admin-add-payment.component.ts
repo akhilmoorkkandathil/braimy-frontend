@@ -7,9 +7,10 @@ import { PaymentData } from '../../../interfaces/paymentFormData';
 import { User } from '../../../interfaces/user';
 
 @Component({
-  selector: 'app-admin-add-payment',
-  templateUrl: './admin-add-payment.component.html',
-  styleUrl: './admin-add-payment.component.css'
+    selector: 'app-admin-add-payment',
+    templateUrl: './admin-add-payment.component.html',
+    styleUrl: './admin-add-payment.component.css',
+    standalone: false
 })
 export class AdminAddPaymentComponent {
   paymentForm!: FormGroup;

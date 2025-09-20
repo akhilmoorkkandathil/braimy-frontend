@@ -10,11 +10,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { AdminServiceService } from '../../../../services/adminService/admin-service.service';
 
 @Component({
-  selector: 'app-add-faq-dialog',
-  standalone: true,
-  imports: [MatButtonModule,MatFormFieldModule,MatInputModule,MatSelectModule,MatCardModule,CommonModule,MatDialogContent,MatDialogActions,FormsModule],
-  templateUrl: './add-faq-dialog.component.html',
-  styleUrl: './add-faq-dialog.component.css'
+    selector: 'app-add-faq-dialog',
+    imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatCardModule, CommonModule, MatDialogContent, MatDialogActions, FormsModule],
+    templateUrl: './add-faq-dialog.component.html',
+    styleUrl: './add-faq-dialog.component.css'
 })
 export class AddFaqDialogComponent {
   question: string = '';

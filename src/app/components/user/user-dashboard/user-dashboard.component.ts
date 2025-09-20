@@ -6,9 +6,10 @@ import { ToastService } from '../../../services/toastService/toast.service';
 import { courseBucket } from '../../../interfaces/courseBucket';
 
 @Component({
-  selector: 'app-user-dashboard',
-  templateUrl: './user-dashboard.component.html',
-  styleUrl: './user-dashboard.component.css'
+    selector: 'app-user-dashboard',
+    templateUrl: './user-dashboard.component.html',
+    styleUrl: './user-dashboard.component.css',
+    standalone: false
 })
 export class UserDashboardComponent implements OnInit {
   bucketData: courseBucket[] = [];

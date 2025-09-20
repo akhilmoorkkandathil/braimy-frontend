@@ -4,9 +4,10 @@ import { User } from '../../../interfaces/user';
 import { courseBucket } from '../../../interfaces/courseBucket';
 
 @Component({
-  selector: 'app-tutor-dashboard',
-  templateUrl: './tutor-dashboard.component.html',
-  styleUrl: './tutor-dashboard.component.css'
+    selector: 'app-tutor-dashboard',
+    templateUrl: './tutor-dashboard.component.html',
+    styleUrl: './tutor-dashboard.component.css',
+    standalone: false
 })
 export class TutorDashboardComponent implements OnInit {
   bucketData: courseBucket[] = [];

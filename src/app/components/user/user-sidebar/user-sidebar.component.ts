@@ -8,9 +8,10 @@ import { UserDataService } from '../../../services/userDataService/user-data.ser
 
 
 @Component({
-  selector: 'app-user-sidebar',
-  templateUrl: './user-sidebar.component.html',
-  styleUrl: './user-sidebar.component.css'
+    selector: 'app-user-sidebar',
+    templateUrl: './user-sidebar.component.html',
+    styleUrl: './user-sidebar.component.css',
+    standalone: false
 })
 export class UserSidebarComponent {
   userData: User;

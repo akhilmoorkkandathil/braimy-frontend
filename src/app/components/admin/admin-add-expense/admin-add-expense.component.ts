@@ -6,9 +6,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ExpenseData } from '../../../interfaces/expenseFormData';
 
 @Component({
-  selector: 'app-admin-add-expense',
-  templateUrl: './admin-add-expense.component.html',
-  styleUrl: './admin-add-expense.component.css'
+    selector: 'app-admin-add-expense',
+    templateUrl: './admin-add-expense.component.html',
+    styleUrl: './admin-add-expense.component.css',
+    standalone: false
 })
 export class AdminAddExpenseComponent {
   expenseForm!: FormGroup;

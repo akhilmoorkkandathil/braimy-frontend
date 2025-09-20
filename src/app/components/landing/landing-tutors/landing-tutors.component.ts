@@ -4,9 +4,10 @@ import { TutorService } from '../../../services/tutorService/tutor.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-landing-tutors',
-  templateUrl: './landing-tutors.component.html',
-  styleUrl: './landing-tutors.component.css'
+    selector: 'app-landing-tutors',
+    templateUrl: './landing-tutors.component.html',
+    styleUrl: './landing-tutors.component.css',
+    standalone: false
 })
 export class LandingTutorsComponent {
   tutors:Tutor[];

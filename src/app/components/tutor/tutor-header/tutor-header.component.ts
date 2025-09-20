@@ -3,9 +3,10 @@ import { Tutor } from '../../../interfaces/tutor';
 import { TutorDataService } from '../../../services/tutorDataService/tutor-data.service';
 
 @Component({
-  selector: 'app-tutor-header',
-  templateUrl: './tutor-header.component.html',
-  styleUrl: './tutor-header.component.css'
+    selector: 'app-tutor-header',
+    templateUrl: './tutor-header.component.html',
+    styleUrl: './tutor-header.component.css',
+    standalone: false
 })
 export class TutorHeaderComponent {
   tutorData:Tutor;

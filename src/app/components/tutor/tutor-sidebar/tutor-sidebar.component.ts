@@ -7,9 +7,10 @@ import { UserDataService } from '../../../services/userDataService/user-data.ser
 import { TutorDataService } from '../../../services/tutorDataService/tutor-data.service';
 
 @Component({
-  selector: 'app-tutor-sidebar',
-  templateUrl: './tutor-sidebar.component.html',
-  styleUrl: './tutor-sidebar.component.css'
+    selector: 'app-tutor-sidebar',
+    templateUrl: './tutor-sidebar.component.html',
+    styleUrl: './tutor-sidebar.component.css',
+    standalone: false
 })
 export class TutorSidebarComponent implements OnInit {
   tutorData: Tutor;

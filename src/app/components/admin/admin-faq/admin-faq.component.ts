@@ -12,11 +12,10 @@ import { faq } from '../../../interfaces/faq';
 import { response } from 'express';
 
 @Component({
-  selector: 'app-admin-faq',
-  standalone: true,
-  imports: [MatButtonModule,MatFormFieldModule,MatInputModule,MatSelectModule,MatCardModule,CommonModule],
-  templateUrl: './admin-faq.component.html',
-  styleUrl: './admin-faq.component.css'
+    selector: 'app-admin-faq',
+    imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatCardModule, CommonModule],
+    templateUrl: './admin-faq.component.html',
+    styleUrl: './admin-faq.component.css'
 })
 export class AdminFaqComponent implements OnInit {
   faqs:faq[] = [];

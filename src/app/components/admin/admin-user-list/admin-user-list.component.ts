@@ -9,9 +9,10 @@ import { UserData } from '../../../interfaces/table/userTableData';
 
 
 @Component({
-  selector: 'app-admin-user-list',
-  templateUrl: './admin-user-list.component.html',
-  styleUrls: ['./admin-user-list.component.css']
+    selector: 'app-admin-user-list',
+    templateUrl: './admin-user-list.component.html',
+    styleUrls: ['./admin-user-list.component.css'],
+    standalone: false
 })
 export class AdminUserListComponent implements OnInit {
   tableColumns: Array<Column> = [

@@ -10,9 +10,10 @@ import { UserSignupService } from '../../../services/userSignup/user-signup.serv
 import { ToastService } from '../../../services/toastService/toast.service';
 
 @Component({
-  selector: 'app-user-register',
-  templateUrl: './user-register.component.html',
-  styleUrl: './user-register.component.css',
+    selector: 'app-user-register',
+    templateUrl: './user-register.component.html',
+    styleUrl: './user-register.component.css',
+    standalone: false
 })
 export class UserRegisterComponent implements OnInit,OnDestroy {
   fb = inject(FormBuilder);

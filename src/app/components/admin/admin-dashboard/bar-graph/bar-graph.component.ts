@@ -1,17 +1,16 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
  
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { AdminServiceService } from '../../../../services/adminService/admin-service.service';
 import { DataPoint } from '../../../../interfaces/dataPoint';
 
 @Component({
-  selector: 'app-bar-graph',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, CanvasJSAngularChartsModule],
-  templateUrl: './bar-graph.component.html',
-  styleUrl: './bar-graph.component.css'
+    selector: 'app-bar-graph',
+    imports: [CommonModule, CanvasJSAngularChartsModule],
+    templateUrl: './bar-graph.component.html',
+	standalone:true,
+    styleUrl: './bar-graph.component.css'
 })
 export class BarGraphComponent implements OnInit, AfterViewInit {
 

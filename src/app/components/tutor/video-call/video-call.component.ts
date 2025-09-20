@@ -4,9 +4,10 @@ import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-video-call',
-  templateUrl: './video-call.component.html',
-  styleUrl: './video-call.component.css'
+    selector: 'app-video-call',
+    templateUrl: './video-call.component.html',
+    styleUrl: './video-call.component.css',
+    standalone: false
 })
 export class tutorVideoCallComponent implements OnInit, AfterViewInit, OnDestroy {
     @ViewChild('localVideo') localVideo: ElementRef;

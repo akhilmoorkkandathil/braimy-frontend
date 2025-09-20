@@ -7,9 +7,10 @@ import { Router } from '@angular/router';
 import { PaymentResponse } from '../../../interfaces/paymentTable';
 
 @Component({
-  selector: 'app-admin-payment-list',
-  templateUrl: './admin-payment-list.component.html',
-  styleUrl: './admin-payment-list.component.css'
+    selector: 'app-admin-payment-list',
+    templateUrl: './admin-payment-list.component.html',
+    styleUrl: './admin-payment-list.component.css',
+    standalone: false
 })
 export class AdminPaymentListComponent {
   tableColumns: Array<Column> = [

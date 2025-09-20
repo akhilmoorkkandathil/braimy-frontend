@@ -12,9 +12,10 @@ import { apiUrls } from '../../../API';
 
 
 @Component({
-  selector: 'app-user-login',
-  templateUrl: './user-login.component.html',
-  styleUrl: './user-login.component.css'
+    selector: 'app-user-login',
+    templateUrl: './user-login.component.html',
+    styleUrl: './user-login.component.css',
+    standalone: false
 })
 export class UserLoginComponent implements OnInit{
 

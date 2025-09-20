@@ -9,9 +9,10 @@ import { ToastService } from '../../../services/toastService/toast.service';
 import { CompletedClass } from '../../../interfaces/completedCassResponse';
 
 @Component({
-  selector: 'app-tutor-class-history',
-  templateUrl: './tutor-class-history.component.html',
-  styleUrl: './tutor-class-history.component.css'
+    selector: 'app-tutor-class-history',
+    templateUrl: './tutor-class-history.component.html',
+    styleUrl: './tutor-class-history.component.css',
+    standalone: false
 })
 export class TutorClassHistoryComponent {
   tableColumns: Array<Column> = [

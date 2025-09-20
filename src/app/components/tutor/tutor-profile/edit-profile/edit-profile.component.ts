@@ -4,18 +4,18 @@ import { TutorService } from '../../../../services/tutorService/tutor.service';
 import { ToastService } from '../../../../services/toastService/toast.service';
 import { TutorDataService } from '../../../../services/tutorDataService/tutor-data.service';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialogContent, MatDialogActions } from '@angular/material/dialog';
-import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-edit-profile',
-  standalone: true,
-  imports: [MatDialogContent,MatFormField,MatDialogActions,FormsModule,MatIconModule,MatLabel,MatInputModule,MatFormFieldModule,MatButtonModule],
-  templateUrl: './edit-profile.component.html',
-  styleUrl: './edit-profile.component.css'
+    selector: 'app-edit-profile',
+    imports: [MatDialogContent, MatFormField, MatDialogActions, FormsModule, MatIconModule, MatInputModule, MatFormFieldModule, MatButtonModule],
+    standalone:true,
+    templateUrl: './edit-profile.component.html',
+    styleUrl: './edit-profile.component.css'
 })
 export class TutorEditProfileComponent {
   tutorData: Tutor; // Define the type based on your user data structure

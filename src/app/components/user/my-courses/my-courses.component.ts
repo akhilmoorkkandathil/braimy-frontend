@@ -10,11 +10,10 @@ import { courseBucket } from '../../../interfaces/courseBucket';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-my-courses',
-  standalone: true,
-  imports: [MatGridListModule,MatCardModule,CommonModule,IgxButtonModule,IgxIconModule,IgxCardModule,IgxRippleModule],
-  templateUrl: './my-courses.component.html',
-  styleUrl: './my-courses.component.css'
+    selector: 'app-my-courses',
+    imports: [MatGridListModule, MatCardModule, CommonModule, IgxButtonModule, IgxIconModule, IgxCardModule, IgxRippleModule],
+    templateUrl: './my-courses.component.html',
+    styleUrl: './my-courses.component.css'
 })
 export class MyCoursesComponent implements OnInit {
 

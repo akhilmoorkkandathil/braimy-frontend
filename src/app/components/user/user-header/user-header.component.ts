@@ -3,9 +3,10 @@ import { User } from '../../../interfaces/user';
 import { UserDataService } from '../../../services/userDataService/user-data.service';
 
 @Component({
-  selector: 'app-user-header',
-  templateUrl: './user-header.component.html',
-  styleUrl: './user-header.component.css'
+    selector: 'app-user-header',
+    templateUrl: './user-header.component.html',
+    styleUrl: './user-header.component.css',
+    standalone: false
 })
 export class UserHeaderComponent {
   userData:User;
