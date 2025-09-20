@@ -8,9 +8,10 @@ import { ToastService } from '../../../services/toastService/toast.service';
 import { StudentDataTable } from '../../../interfaces/table/studentManagementTable';
 
 @Component({
-  selector: 'app-coordinator-stuedents',
-  templateUrl: './coordinator-stuedents.component.html',
-  styleUrl: './coordinator-stuedents.component.css'
+    selector: 'app-coordinator-stuedents',
+    templateUrl: './coordinator-stuedents.component.html',
+    styleUrl: './coordinator-stuedents.component.css',
+    standalone: false
 })
 export class CoordinatorStuedentsComponent {
   tableColumns: Array<Column> = [

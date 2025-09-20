@@ -15,11 +15,10 @@ import { UserDataService } from '../../../services/userDataService/user-data.ser
 import { User } from '../../../interfaces/user';
 
 @Component({
-  selector: 'app-user-payment',
-  standalone: true,
-  imports: [MatCardModule, MatButtonModule,MatIconModule],
-  templateUrl: './user-payment.component.html',
-  styleUrl: './user-payment.component.css',
+    selector: 'app-user-payment',
+    imports: [MatCardModule, MatButtonModule, MatIconModule],
+    templateUrl: './user-payment.component.html',
+    styleUrl: './user-payment.component.css'
 })
 export class UserPaymentComponent {
   razorpayOrder!: RazorpayOrder;

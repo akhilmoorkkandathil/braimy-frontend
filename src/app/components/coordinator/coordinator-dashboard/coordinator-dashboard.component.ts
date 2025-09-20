@@ -5,9 +5,10 @@ import { User } from '../../../interfaces/user';
 import { courseBucket } from '../../../interfaces/courseBucket';
 
 @Component({
-  selector: 'app-coordinator-dashboard',
-  templateUrl: './coordinator-dashboard.component.html',
-  styleUrl: './coordinator-dashboard.component.css'
+    selector: 'app-coordinator-dashboard',
+    templateUrl: './coordinator-dashboard.component.html',
+    styleUrl: './coordinator-dashboard.component.css',
+    standalone: false
 })
 export class CoordinatorDashboardComponent implements OnInit {
 

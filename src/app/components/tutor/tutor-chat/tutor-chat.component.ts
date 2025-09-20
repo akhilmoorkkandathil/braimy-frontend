@@ -12,11 +12,10 @@ import { EmojiesComponent } from '../../shared/emojies/emojies.component';
 import { TutorDataService } from '../../../services/tutorDataService/tutor-data.service';
 
 @Component({
-  selector: 'app-tutor-chat',
-  standalone: true,
-  imports: [CommonModule,FormsModule,RouterModule,EmojiesComponent],
-  templateUrl: './tutor-chat.component.html',
-  styleUrl: './tutor-chat.component.css'
+    selector: 'app-tutor-chat',
+    imports: [CommonModule, FormsModule, RouterModule, EmojiesComponent],
+    templateUrl: './tutor-chat.component.html',
+    styleUrl: './tutor-chat.component.css'
 })
 export class TutorChatComponent {
 

@@ -9,9 +9,10 @@ import { TutorData } from '../../../interfaces/table/tutorsTableData';
 
 
 @Component({
-  selector: 'app-admin-tutors-list',
-  templateUrl: './admin-tutors-list.component.html',
-  styleUrl: './admin-tutors-list.component.css'
+    selector: 'app-admin-tutors-list',
+    templateUrl: './admin-tutors-list.component.html',
+    styleUrl: './admin-tutors-list.component.css',
+    standalone: false
 })
 export class AdminTutorsListComponent {
   tableColumns: Array<userColumn> = [

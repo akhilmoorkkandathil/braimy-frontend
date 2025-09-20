@@ -23,25 +23,24 @@ import { TextToHtmlPipe } from "../../../pipe/text-to-html.pipe";
 
 
 @Component({
-  selector: 'app-smart-learn-mentor-component',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    TextToHtmlPipe,
-    NgxLoadingModule
-  ],
-  templateUrl: './smart-learn-mentor.component.html',
-  styleUrl: './smart-learn-mentor.component.css',
-  animations: [
-    trigger("typeWritterEffect", [
-      transition(":enter", [
-        style({ opacity: 0 }),
-        animate("2s", style({ opacity: 1 })),
-      ]),
-    ]),
-  ],
+    selector: 'app-smart-learn-mentor-component',
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        TextToHtmlPipe,
+        NgxLoadingModule
+    ],
+    templateUrl: './smart-learn-mentor.component.html',
+    styleUrl: './smart-learn-mentor.component.css',
+    animations: [
+        trigger("typeWritterEffect", [
+            transition(":enter", [
+                style({ opacity: 0 }),
+                animate("2s", style({ opacity: 1 })),
+            ]),
+        ]),
+    ]
 })
 export class SmartLearnMentorComponent implements AfterViewChecked {
   @ViewChild("chat-body") private messagesContainer!: ElementRef;

@@ -8,9 +8,10 @@ import { Router, } from '@angular/router';
 import { CourseData } from '../../../interfaces/table/courseTableData';
 
 @Component({
-  selector: 'app-admin-course-list',
-  templateUrl: './admin-course-list.component.html',
-  styleUrl: './admin-course-list.component.css'
+    selector: 'app-admin-course-list',
+    templateUrl: './admin-course-list.component.html',
+    styleUrl: './admin-course-list.component.css',
+    standalone: false
 })
 export class AdminCourseListComponent {
   tableColumns: Array<Column> = [

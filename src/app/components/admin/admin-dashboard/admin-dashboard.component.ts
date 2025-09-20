@@ -5,18 +5,17 @@ import { BarGraphComponent } from './bar-graph/bar-graph.component';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'app-admin-dashboard',
-  standalone:true,
-  imports:[DoughbutGraphComponent,BarGraphComponent],
-  templateUrl: './admin-dashboard.component.html',
-  styleUrl: './admin-dashboard.component.css',
-  animations: [
-    trigger('countAnimation', [
-      state('initial', style({ transform: 'scale(1)' })),
-      state('animated', style({ transform: 'scale(1.2)' })),
-      transition('initial <=> animated', animate('300ms ease-in-out'))
-    ])
-  ]
+    selector: 'app-admin-dashboard',
+    imports: [DoughbutGraphComponent, BarGraphComponent],
+    templateUrl: './admin-dashboard.component.html',
+    styleUrl: './admin-dashboard.component.css',
+    animations: [
+        trigger('countAnimation', [
+            state('initial', style({ transform: 'scale(1)' })),
+            state('animated', style({ transform: 'scale(1.2)' })),
+            transition('initial <=> animated', animate('300ms ease-in-out'))
+        ])
+    ]
 })
 export class AdminDashboardComponent implements OnInit {
 

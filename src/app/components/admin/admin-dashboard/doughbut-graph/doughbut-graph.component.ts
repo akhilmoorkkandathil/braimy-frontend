@@ -6,11 +6,11 @@ import { UserServiceService } from '../../../../services/userServices/user-servi
 import { courseBucket } from '../../../../interfaces/courseBucket';
 
 @Component({
-  selector: 'app-doughbut-graph',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, CanvasJSAngularChartsModule],
-  templateUrl: './doughbut-graph.component.html',
-  styleUrl: './doughbut-graph.component.css'
+    selector: 'app-doughbut-graph',
+    imports: [CommonModule, CanvasJSAngularChartsModule],
+    standalone:true,
+    templateUrl: './doughbut-graph.component.html',
+    styleUrl: './doughbut-graph.component.css'
 })
 export class DoughbutGraphComponent implements AfterViewInit {
   dataPoints: { y: number; name: string }[] = [];

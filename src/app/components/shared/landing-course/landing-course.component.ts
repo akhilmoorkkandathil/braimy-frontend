@@ -5,9 +5,10 @@ import { UserServiceService } from '../../../services/userServices/user-service.
 type Topic = 'gettingStarted' | 'reactBasics';
 
 @Component({
-  selector: 'app-landing-course',
-  templateUrl: './landing-course.component.html',
-  styleUrl: './landing-course.component.css'
+    selector: 'app-landing-course',
+    templateUrl: './landing-course.component.html',
+    styleUrl: './landing-course.component.css',
+    standalone: false
 })
 export class LandingCourseComponent {
 

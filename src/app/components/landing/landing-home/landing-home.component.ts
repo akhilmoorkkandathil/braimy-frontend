@@ -7,21 +7,22 @@ import { AdminServiceService } from '../../../services/adminService/admin-servic
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'app-landing-home',
-  templateUrl: './landing-home.component.html',
-  styleUrl: './landing-home.component.css',
-  animations: [
-    trigger('faqAnimation', [
-      state('void', style({ opacity: 0 })),
-      state('*', style({ opacity: 1 })),
-      transition('void => *', [
-        animate('300ms ease-in') // Duration for opening
-      ]),
-      transition('* => void', [
-        animate('300ms ease-out') // Duration for closing
-      ])
-    ])
-  ]
+    selector: 'app-landing-home',
+    templateUrl: './landing-home.component.html',
+    styleUrl: './landing-home.component.css',
+    animations: [
+        trigger('faqAnimation', [
+            state('void', style({ opacity: 0 })),
+            state('*', style({ opacity: 1 })),
+            transition('void => *', [
+                animate('300ms ease-in') // Duration for opening
+            ]),
+            transition('* => void', [
+                animate('300ms ease-out') // Duration for closing
+            ])
+        ])
+    ],
+    standalone: false
 })
 export class LandingHomeComponent {
 

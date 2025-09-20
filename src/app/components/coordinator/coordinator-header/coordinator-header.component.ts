@@ -3,9 +3,10 @@ import { Coordinator } from '../../../interfaces/coordinator';
 import { CoordinatorDataService } from '../../../services/coordinatorDataService/coordinator-data.service';
 
 @Component({
-  selector: 'app-coordinator-header',
-  templateUrl: './coordinator-header.component.html',
-  styleUrl: './coordinator-header.component.css'
+    selector: 'app-coordinator-header',
+    templateUrl: './coordinator-header.component.html',
+    styleUrl: './coordinator-header.component.css',
+    standalone: false
 })
 export class CoordinatorHeaderComponent {
   coordinatorData:Coordinator;

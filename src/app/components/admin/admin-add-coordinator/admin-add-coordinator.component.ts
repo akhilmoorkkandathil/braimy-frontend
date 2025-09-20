@@ -6,9 +6,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CoordinatorData } from '../../../interfaces/table/coordinatorFromData';
 
 @Component({
-  selector: 'app-admin-add-coordinator',
-  templateUrl: './admin-add-coordinator.component.html',
-  styleUrl: './admin-add-coordinator.component.css'
+    selector: 'app-admin-add-coordinator',
+    templateUrl: './admin-add-coordinator.component.html',
+    styleUrl: './admin-add-coordinator.component.css',
+    standalone: false
 })
 export class AdminAddCoordinatorComponent {
   coordinatorForm!: FormGroup;

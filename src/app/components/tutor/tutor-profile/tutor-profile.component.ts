@@ -10,11 +10,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-tutor-profile',
-  standalone: true,
-  imports: [CommonModule,MatCardModule,MatIconModule],
-  templateUrl: './tutor-profile.component.html',
-  styleUrl: './tutor-profile.component.css'
+    selector: 'app-tutor-profile',
+    imports: [CommonModule, MatCardModule, MatIconModule],
+    templateUrl: './tutor-profile.component.html',
+    styleUrl: './tutor-profile.component.css'
 })
 export class TutorProfileComponent {
   tutorData:Tutor;

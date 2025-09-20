@@ -13,11 +13,10 @@ import { ToastService } from '../../../../services/toastService/toast.service';
 import { UserDataService } from '../../../../services/userDataService/user-data.service';
 
 @Component({
-  selector: 'app-chat-layout',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule,EmojiesComponent],
-  templateUrl: './chat-layout.component.html',
-  styleUrl: './chat-layout.component.css',
+    selector: 'app-chat-layout',
+    imports: [CommonModule, FormsModule, RouterModule, EmojiesComponent],
+    templateUrl: './chat-layout.component.html',
+    styleUrl: './chat-layout.component.css'
 })
 export class ChatLayoutComponent implements OnInit {
 

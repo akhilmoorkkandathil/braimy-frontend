@@ -10,11 +10,10 @@ import { AddToBucketComponent } from './add-to-bucket/add-to-bucket.component';
 
 
 @Component({
-  selector: 'app-user-course',
-  standalone: true,
-  imports: [MatButtonModule,MatIconModule],
-  templateUrl: './user-course.component.html',
-  styleUrl: './user-course.component.css'
+    selector: 'app-user-course',
+    imports: [MatButtonModule, MatIconModule],
+    templateUrl: './user-course.component.html',
+    styleUrl: './user-course.component.css'
 })
 export class UserCourseComponent {
   course: Course; // Define the type according to your data

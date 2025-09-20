@@ -8,9 +8,10 @@ import { TutorService } from '../../../services/tutorService/tutor.service';
 import { courseBucket } from '../../../interfaces/courseBucket';
 
 @Component({
-  selector: 'app-tutor-classes',
-  templateUrl: './tutor-classes.component.html',
-  styleUrl: './tutor-classes.component.css'
+    selector: 'app-tutor-classes',
+    templateUrl: './tutor-classes.component.html',
+    styleUrl: './tutor-classes.component.css',
+    standalone: false
 })
 export class TutorClassesComponent {
   tableColumns: Array<Column> = [

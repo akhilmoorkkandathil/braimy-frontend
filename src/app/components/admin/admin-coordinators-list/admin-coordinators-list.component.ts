@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
 import { CoordinatorData } from '../../../interfaces/table/coordinatorFromData';
 
 @Component({
-  selector: 'app-admin-coordinators-list',
-  templateUrl: './admin-coordinators-list.component.html',
-  styleUrl: './admin-coordinators-list.component.css'
+    selector: 'app-admin-coordinators-list',
+    templateUrl: './admin-coordinators-list.component.html',
+    styleUrl: './admin-coordinators-list.component.css',
+    standalone: false
 })
 export class AdminCoordinatorsListComponent {
   tableColumns: Array<userColumn> = [

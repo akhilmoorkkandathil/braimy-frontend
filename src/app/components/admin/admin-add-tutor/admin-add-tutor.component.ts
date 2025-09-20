@@ -7,9 +7,10 @@ import { Tutor } from '../../../interfaces/tutor';
 import { TutorData } from '../../../interfaces/tutorFormData';
 
 @Component({
-  selector: 'app-admin-add-tutor',
-  templateUrl: './admin-add-tutor.component.html',
-  styleUrl: './admin-add-tutor.component.css'
+    selector: 'app-admin-add-tutor',
+    templateUrl: './admin-add-tutor.component.html',
+    styleUrl: './admin-add-tutor.component.css',
+    standalone: false
 })
 export class AdminAddTutorComponent {
   tutorForm!: FormGroup;

@@ -12,11 +12,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-user-courses-bucket',
-  standalone: true,
-  imports: [MatGridListModule,MatCardModule,CommonModule,IgxButtonModule,IgxIconModule,IgxCardModule,IgxRippleModule,MatButtonModule,MatIconModule],
-  templateUrl: './user-courses-bucket.component.html',
-  styleUrl: './user-courses-bucket.component.css'
+    selector: 'app-user-courses-bucket',
+    imports: [MatGridListModule, MatCardModule, CommonModule, IgxButtonModule, IgxIconModule, IgxCardModule, IgxRippleModule, MatButtonModule, MatIconModule],
+    templateUrl: './user-courses-bucket.component.html',
+    styleUrl: './user-courses-bucket.component.css'
 })
 export class UserCoursesBucketComponent {
   bucketCourses: courseBucket[] = [];

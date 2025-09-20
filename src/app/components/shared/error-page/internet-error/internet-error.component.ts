@@ -6,34 +6,32 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 
 @Component({
-  selector: 'app-internet-error',
-  standalone: true,
-  imports: [RouterModule,MatCardModule],
-  templateUrl: './internet-error.component.html',
-  styleUrl: './internet-error.component.css'
-  
-  ,
-  animations: [
-    trigger('cardAnimation', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-50px)' }),
-        animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-      ])
-    ]),
-    trigger('numberAnimation', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'scale(0.5)' }),
-        animate('500ms 300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
-      ])
-    ]),
-    trigger('typingAnimation', [
-      state('typing', style({ width: 'auto' })),
-      transition('* => typing', [
-        style({ width: '0' }),
-        animate('2s steps({{ messageLength }})', style({ width: 'auto' }))
-      ])
-    ])
-  ]
+    selector: 'app-internet-error',
+    imports: [RouterModule, MatCardModule],
+    standalone:true,
+    templateUrl: './internet-error.component.html',
+    styleUrl: './internet-error.component.css',
+    animations: [
+        trigger('cardAnimation', [
+            transition(':enter', [
+                style({ opacity: 0, transform: 'translateY(-50px)' }),
+                animate('500ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+            ])
+        ]),
+        trigger('numberAnimation', [
+            transition(':enter', [
+                style({ opacity: 0, transform: 'scale(0.5)' }),
+                animate('500ms 300ms ease-out', style({ opacity: 1, transform: 'scale(1)' }))
+            ])
+        ]),
+        trigger('typingAnimation', [
+            state('typing', style({ width: 'auto' })),
+            transition('* => typing', [
+                style({ width: '0' }),
+                animate('2s steps({{ messageLength }})', style({ width: 'auto' }))
+            ])
+        ])
+    ]
 })
 export class InternetErrorComponent {
   errorCode: string | null = null;

@@ -13,11 +13,10 @@ import { CoordinatorDataService } from '../../../services/coordinatorDataService
 
 
 @Component({
-  selector: 'app-profile',
-  standalone: true,
-  imports: [CommonModule,MatCardModule,MatIconModule],
-  templateUrl: './profile.component.html',
-  styleUrl: './profile.component.css'
+    selector: 'app-profile',
+    imports: [CommonModule, MatCardModule, MatIconModule],
+    templateUrl: './profile.component.html',
+    styleUrl: './profile.component.css'
 })
 export class CoordinatorProfileComponent {
     coordinatorData:Coordinator;

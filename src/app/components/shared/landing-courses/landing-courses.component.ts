@@ -5,9 +5,10 @@ import { Course } from '../../../interfaces/course';
 import { CourseService } from '../../../services/corseService/course.service';
 
 @Component({
-  selector: 'app-landing-courses',
-  templateUrl: './landing-courses.component.html',
-  styleUrl: './landing-courses.component.css'
+    selector: 'app-landing-courses',
+    templateUrl: './landing-courses.component.html',
+    styleUrl: './landing-courses.component.css',
+    standalone: false
 })
 export class LandingCoursesComponent {
   courses: Course[] = []; // Array to store the fetched courses

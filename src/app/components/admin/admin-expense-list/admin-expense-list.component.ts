@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
 import { ExpenseData } from '../../../interfaces/table/expenseData';
 
 @Component({
-  selector: 'app-admin-expense-list',
-  templateUrl: './admin-expense-list.component.html',
-  styleUrl: './admin-expense-list.component.css'
+    selector: 'app-admin-expense-list',
+    templateUrl: './admin-expense-list.component.html',
+    styleUrl: './admin-expense-list.component.css',
+    standalone: false
 })
 export class AdminExpenseListComponent {
   // Table column definition

@@ -6,9 +6,10 @@ import { ActivatedRoute } from '@angular/router';
 import { ToastService } from '../../../services/toastService/toast.service';
 
 @Component({
-  selector: 'app-user-otp-verify',
-  templateUrl: './user-otp-verify.component.html',
-  styleUrl: './user-otp-verify.component.css'
+    selector: 'app-user-otp-verify',
+    templateUrl: './user-otp-verify.component.html',
+    styleUrl: './user-otp-verify.component.css',
+    standalone: false
 })
 export class UserOtpVerifyComponent {
   otp1: string = '';

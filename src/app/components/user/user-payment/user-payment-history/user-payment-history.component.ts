@@ -7,9 +7,10 @@ import { ToastService } from '../../../../services/toastService/toast.service';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-user-payment-history',
-  templateUrl: './user-payment-history.component.html',
-  styleUrl: './user-payment-history.component.css'
+    selector: 'app-user-payment-history',
+    templateUrl: './user-payment-history.component.html',
+    styleUrl: './user-payment-history.component.css',
+    standalone: false
 })
 export class UserPaymentHistoryComponent {
   tableColumns: Array<Column> = [

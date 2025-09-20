@@ -3,11 +3,10 @@ import { Component, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-emojies',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './emojies.component.html',
-  styleUrl: './emojies.component.css'
+    selector: 'app-emojies',
+    imports: [CommonModule],
+    templateUrl: './emojies.component.html',
+    styleUrl: './emojies.component.css'
 })
 export class EmojiesComponent {
   @Output() emojiSelected = new EventEmitter<string>();

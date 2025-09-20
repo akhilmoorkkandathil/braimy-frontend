@@ -7,9 +7,10 @@ import { CourseData } from '../../../interfaces/courseForm';
 
 
 @Component({
-  selector: 'app-admin-add-course',
-  templateUrl: './admin-add-course.component.html',
-  styleUrl: './admin-add-course.component.css'
+    selector: 'app-admin-add-course',
+    templateUrl: './admin-add-course.component.html',
+    styleUrl: './admin-add-course.component.css',
+    standalone: false
 })
 export class AdminAddCourseComponent {
   courseForm!: FormGroup;
