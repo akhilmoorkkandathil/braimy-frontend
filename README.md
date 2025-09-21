@@ -28,3 +28,10 @@ This e-learning application is built using the MEAN stack, which comprises Mongo
 ##Development Tools
     => Version Control: Use Git for source code management and collaboration.
     => Continuous Integration/Continuous Deployment (CI/CD): Implement CI/CD pipelines to streamline the development and deployment process.
+
+
+Branches
+
+Main
+dev
+fix/fb
